@@ -1,0 +1,19 @@
+body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #004085;
+}
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+.navbar-toggler {
+    border-color: #ffffff;
+}
