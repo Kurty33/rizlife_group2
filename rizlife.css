@@ -1,19 +1,92 @@
+/* General Styles */
 body {
     font-family: 'Gilroy-Bold', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Navbar */
 .navbar {
-    background-color: #004085;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
 }
+
 .navbar-brand, .nav-link {
     color: #ffffff !important;
     font-weight: bold;
 }
+
 .nav-link:hover {
     color: #ffc107 !important;
 }
+
 .navbar-toggler {
     border-color: #ffffff;
+}
+
+/* Highlight the active tab */
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Reduce height */
+    overflow: hidden;
+}
+.carousel-inner, .carousel-item {
+    height: 90vh; /* Smaller than full screen */
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the entire space */
+    filter: brightness(50%); /* Increase dim effect */
+}
+
+/* Carousel Caption */
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        height: 60vh; /* Reduce height for tablets */
+    }
+    .carousel-inner, .carousel-item {
+        height: 60vh;
+    }
+    .carousel-caption {
+        bottom: 15%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 50vh; /* Reduce height for mobile */
+    }
+    .carousel-inner, .carousel-item {
+        height: 50vh;
+    }
+    .carousel-caption {
+        bottom: 10%;
+        font-size: 12px;
+        padding: 10px;
+    }
 }
