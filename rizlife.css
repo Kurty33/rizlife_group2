@@ -7,7 +7,7 @@ body {
 
 p {
     color: white;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 /* Navbar */
@@ -91,6 +91,11 @@ p {
     max-width: 400px; /* Prevents it from being too large */
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.book-gif:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
 }
 
 /* Biography Image */
@@ -99,6 +104,106 @@ p {
     max-width: 350px; /* Prevents it from being too large */
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.biography-img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #222;
+    padding: 30px 0;
+    border-top: 3px solid #ffc107;
+}
+
+.footer-section h5 {
+    color: #ffc107;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Properly Center Contributors */
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Align names and roles properly on larger screens */
+.team-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+}
+
+.name {
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.role {
+    flex: 1;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Center alignment for project info */
+.project-info {
+    font-size: 16px;
+    color: #ccc;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Instructor styling */
+.instructor {
+    font-size: 16px;
+    color: #ffc107;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style for Volume Button */
+#volume-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#volume-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hover Effect */
+#volume-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -117,11 +222,66 @@ p {
     .title-heading {
         font-size: 2rem;
     }
-    .book-gif {
+    .book-gif,
+    .biography-img {
         max-width: 300px;
+        margin-bottom: 20px; /* Added space below images */
     }
     .content-section {
         padding: 40px 5%;
+    }
+
+    .footer-section .row {
+        text-align: center;
+    }
+
+    .footer-section .col-md-4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Ensure contributors list is fully centered */
+    .team-list {
+        align-items: center; 
+        text-align: center;
+        justify-content: center;
+    }
+
+    .team-list li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .name, .role {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .project-info {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .text-md-end {
+        text-align: center !important;
+    }
+
+    .text-start {
+        margin-top: 20px; /* Add space above text when it stacks */
+    }
+
+    .row.align-items-center {
+        margin-bottom: 30px; /* Add space between each section */
+    }
+
+    .biography-img:hover {
+        transform: scale(1.05); /* Slightly smaller enlargement on tablets */
+    }
+
+    .book-gif:hover {
+        transform: scale(1.05); /* Enlarge the image on hover */
     }
 }
 
@@ -140,10 +300,64 @@ p {
     .title-heading {
         font-size: 1.8rem;
     }
-    .book-gif {
+    .book-gif,
+    .biography-img {
         max-width: 250px;
+        margin-bottom: 25px; /* More space for smaller screens */
     }
     .content-section {
         padding: 30px 5%;
+    }
+    .footer-section .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section .col-md-4 {
+        text-align: center;
+    }
+
+    /* Contributors list fully centered */
+    .team-list {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .team-list li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .name, .role {
+        text-align: center;
+        display: block;
+        font-weight: bold;
+    }
+
+    .project-info {
+        font-size: 14px;
+    }
+
+    .instructor {
+        font-size: 14px;
+    }
+
+    .text-start {
+        margin-top: 25px; /* More space above text */
+    }
+
+    .row.align-items-center {
+        margin-bottom: 35px; /* Add spacing between sections */
+    }
+
+    .biography-img:hover {
+        transform: none; /* Disable hover effect on small screens */
+    }
+
+    .book-gif:hover {
+        transform: none; /* Enlarge the image on hover */
     }
 }
