@@ -8,6 +8,9 @@ body {
 p {
     color: white;
     font-size: 18px;
+}
+
+.content-section p {
     text-align: justify;
 }
 
