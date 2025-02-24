@@ -8,6 +8,7 @@ body {
 p {
     color: white;
     font-size: 18px;
+    text-align: justify;
 }
 
 /* Navbar */
