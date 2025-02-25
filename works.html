@@ -6,42 +6,378 @@
     <link id="favicon" rel="icon" type="image/jpg" href="rizal.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="rizlife.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="works.css">
 </head>
 <body>
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Rizal's Life</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="works.html">Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="analysis.html">Analysis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resources.html">Resources</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="works.html">Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analysis.html">Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="main-content">
+    <section class="hero">
+        <div class="hero-overlay"></div> <!-- Dim effect -->
+        <div class="container text-center">
+            <h1 class="display-4">El Filibusterismo</h1>
+            <div class="text-box">
+                <p id="animated-text"></p>
+        </div>
+        </div>
+    </section>
+
+<!-- Works Content -->
+<div class="container my-5">
+    <h2 class="section-title">Plot Summary</h2>
+    <div class="accordion" id="plotSummary">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#plot1">
+                    1. Steamboat Journey to La Laguna
+                </button>
+            </h2>
+            <div id="plot1" class="accordion-collapse collapse show" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    A steamboat traveling from Manila to La Laguna carries passengers from all social classes, including prominent 
+                    figures like priests and journalists, as well as the disguised Simoun, who is plotting a revolution. Two students, 
+                    Basilio and Isagani, are also aboard, petitioning for a Spanish-language academy.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot2">
+                    2. Cabesang Tales’s Struggles
+                </button>
+            </h2>
+            <div id="plot2" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    In La Laguna, Cabesang Tales, a farmer, is extorted by the local priests for rent on land they claim to own. 
+                    His daughter Julí sells herself into servitude to ransom her father after he is kidnapped by the authorities.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot3">
+                    3. Basilio’s Return and Meeting Simoun
+                </button>
+            </h2>
+            <div id="plot3" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    Basilio, who has been away in Manila, returns to La Laguna and meets Simoun, recognizing him as Ibarra in 
+                    disguise. Simoun seeks to incite an uprising but Basilio refuses to join his cause.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot4">
+                    4. Tales’s Revenge
+                </button>
+            </h2>
+            <div id="plot4" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    After being betrayed by the authorities, Tales steals Simoun’s gun, kills the priest and landowner who 
+                    wronged him, and joins bandits in the forest.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot5">
+                    5. Plácido Penitente’s Crisis
+                </button>
+            </h2>
+            <div id="plot5" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    Plácido, a medical student, loses faith in his education and, after a humiliating experience, turns to 
+                    Simoun for help. Simoun pulls him into his revolutionary plot.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot6">
+                    6. Students and the Spanish Academy
+                </button>
+            </h2>
+            <div id="plot6" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    Isagani and other students learn that Don Custodio has decided on the creation of the Spanish-language 
+                    academy, but it will be run by the priests, sparking anger among the students.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot7">
+                    7. The French Operetta and Student Celebration
+                </button>
+            </h2>
+            <div id="plot7" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    At a party, Simoun helps Chinese merchant Quiroga with his debts, and the students celebrate their 
+                    small victory despite the disappointment about the academy’s decision. During a performance of a French operetta, 
+                    Isagani sees his fiancée with Juanito, deepening his emotional turmoil.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot8">
+                    8. Basilio’s Grim Discovery
+                </button>
+            </h2>
+            <div id="plot8" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    Simoun proposes a plan to rescue María Clara from her convent, but Basilio reveals she has died, devastating 
+                    Simoun and escalating his desire for revenge.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot9">
+                    9. Student Arrests and Suppression
+                </button>
+            </h2>
+            <div id="plot9" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    After a student banquet, subversive broadsides are discovered, leading to arrests of the students. Isagani 
+                    debates with Father Fernández, who reluctantly defends the colonial system.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot10">
+                    10. Simoun’s Quiet Grief and Escalating Violence
+                </button>
+            </h2>
+            <div id="plot10" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    The student movement is crushed, and Basilio, unprotected after Captain Tiago’s death, remains imprisoned. 
+                    Julí attempts to petition for Basilio’s release but is assaulted and dies. The chief of staff resigns in protest.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot11">
+                    11. Basilio Joins Simoun’s Plot
+                </button>
+            </h2>
+            <div id="plot11" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    After being released, Basilio agrees to join Simoun’s plot to bomb a wedding, targeting Manila’s elite. 
+                    However, Isagani intervenes, throwing the bomb into the river and escaping unrecognized.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#plot12">
+                    12. Simoun’s Plan Unravels
+                </button>
+            </h2>
+            <div id="plot12" class="accordion-collapse collapse" data-bs-parent="#plotSummary">
+                <div class="accordion-body">
+                    Simoun, wounded and on the run, seeks shelter with Father Florentino. He reveals his plan and regrets 
+                    his actions, prompting a philosophical discussion about justice and revenge. Florentino prays for Simoun 
+                    and throws his jewels into the ocean, symbolizing the destruction of Simoun’s vision.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center">Key Characters</h2>
+        <div class="character-gallery">
+            <div class="character-card" data-desc="Disguised as a wealthy jeweler, he seeks revenge against Spanish authorities and manipulates events to incite revolution.">
+                <img src="simoun.jpg" alt="Simoun" class="character-img">
+                <h4>Simoun (Ibarra)</h4>
+            </div>
+            <div class="character-card" data-desc="A tragic figure representing purity, love, and sacrifice; she is Ibarra’s lost love and symbolizes the nation’s suffering and loss under colonialism.">
+                <img src="clara.png" alt="Maria Clara" class="character-img">
+                <h4>Maria Clara</h4>
+            </div>
+            <div class="character-card" data-desc="A passionate student and idealist, Isagani advocates for reform and justice but struggles with the harsh realities of colonial oppression.">
+                <img src="isagani.png" alt="Isagani" class="character-img">
+                <h4>Isagani</h4>
+            </div>
+            <div class="character-card" data-desc="A medical student and son of Sisa, Basilio represents the intellectual youth and, after personal tragedy, becomes involved in revolutionary thoughts.">
+                <img src="basilio.png" alt="Basilio" class="character-img">
+                <h4>Basilio</h4>
+            </div>
+            <div class="character-card" data-desc="A government official who vacillates between liberalism and conservatism, ultimately allowing the creation of the Spanish-language academy, but with priest control.">
+                <img src="custodio.png" alt="Don Custodio" class="character-img">
+                <h4>Don Custodio</h4>
+            </div>
+            <div class="character-card" data-desc="A sympathetic but ultimately ineffectual priest who represents the more passive and bureaucratic members of the clergy.">
+                <img src="irene.png" alt="Padre Irene" class="character-img">
+                <h4>Padre Irene</h4>
+            </div>
+            <div class="character-card" data-desc="A social-climbing, delusional woman who embodies the Filipino elite's desire to imitate Spanish customs, often at the expense of her own identity.">
+                <img src="victorina.png" alt="Dona Victorina" class="character-img">
+                <h4>Dona Victorina</h4>
+            </div>
+            <div class="character-card" data-desc="A beautiful young woman torn between love and social ambition, ultimately choosing Juanito over Isagani for status.">
+                <img src="paulita.png" alt="Paulita Gomez" class="character-img">
+                <h4>Paulita Gomez</h4>
+            </div>
+            <div class="character-card" data-desc="A corrupt and lecherous priest who abuses his power and is a symbol of the Spanish clergy’s moral degradation.">
+                <img src="camorra.png" alt="Padre Camorra" class="character-img">
+                <h4>Padre Camorra</h4>
+            </div>
+            <div class="character-card" data-desc="A sinister and oppressive friar who is a central antagonist, linked to the suffering of characters like María Clara and Cabesang Tales.">
+                <img src="salvi.png" alt="Padre Salvi" class="character-img">
+                <h4>Padre Salvi</h4>
+            </div>
+            <div class="character-card" data-desc="A calculating and conservative priest who is more focused on preserving the church's influence than reform.">
+                <img src="sibyla.png" alt="Padre Sibyla" class="character-img">
+                <h4>Padre Sibyla</h4>
+            </div>
+            <div class="character-card" data-desc="A wealthy, opium-addicted man who is deeply tied to Spanish authorities, symbolizing the Filipino elite's subjugation and moral weakness.">
+                <img src="tyago.png" alt="Kapitan Tyago" class="character-img">
+                <h4>Kapitan Tyago</h4>
+            </div>
+            <div class="character-card" data-desc="A morally upright priest who debates with Simoun in the novel’s conclusion, representing hope and the possibility of redemption.">
+                <img src="florentino.png" alt="Padre Florentino" class="character-img">
+                <h4>Padre Florentino</h4>
+            </div>
+            <div class="character-card" data-desc="A farmer wronged by the priests, he becomes a bandit in his quest for justice, symbolizing the peasant’s struggle against colonial oppression.">
+                <img src="tales.png" alt="Kabesang Tales" class="character-img">
+                <h4>Kabesang Tales</h4>
+            </div>
+            <div class="character-card" data-desc="The tragic fiancée of Basilio, she sacrifices herself to save her father and represents the suffering of Filipino women under colonial rule.">
+                <img src="juli.png" alt="Juli" class="character-img">
+                <h4>Juli</h4>
+            </div>
+            <div class="character-card" data-desc="A peaceful, elderly man whose tragic fate symbolizes the innocence of the Filipino peasantry crushed by the system.">
+                <img src="selo.png" alt="Tandang Selo" class="character-img">
+                <h4>Tandang Selo</h4>
+            </div>
+            <div class="character-card" data-desc="A progressive priest who argues for reform, acknowledging the need for change within the church and the Spanish system.">
+                <img src="fernandez.png" alt="Padre Fernandez" class="character-img">
+                <h4>Padre Fernandez</h4>
+            </div>
+            <div class="character-card" data-desc="A weak and submissive husband to Doña Victorina, he represents the subservient Filipino who lacks agency in his own life.">
+                <img src="tiburcio.png" alt="Don Tiburcio" class="character-img">
+                <h4>Don Tiburcio</h4>
+            </div>
+            <div class="character-card" data-desc="A pompous and oppressive priest who embodies the church's moral decay and resistance to reform in education.">
+                <img src="millon.png" alt="Padre Millon" class="character-img">
+                <h4>Padre Millon</h4>
+            </div>
+            <div class="character-card" data-desc="Juanito’s father, a manipulative figure who uses his influence to advance his family’s interests.">
+                <img src="timoteo.png" alt="Don Timoteo" class="character-img">
+                <h4>Don Timoteo</h4>
+            </div>
+            <div class="character-card" data-desc="A student leader advocating for reform, representing the intellectuals seeking change through peaceful means.">
+                <img src="makaraig.png" alt="Makaraig" class="character-img">
+                <h4>Makaraig</h4>
+            </div>
+        </div>
+    </div>
+    
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" class="modal-img">
+                <div class="modal-text">
+                    <h4 id="modalTitle"></h4>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer-section text-white">
+    <div class="container">
+        <div class="row justify-content-center text-center text-md-start">
+            <!-- Names (Left Side) -->
+            <div class="col-md-4">
+                <h5>Contributors</h5>
+                <ul class="list-unstyled team-list">
+                    <li><span class="name">Kurt Russelle Oteyza</span> <span class="role">- Project Manager</span></li>
+                    <li><span class="name">Adrian Jose Hernaez</span> <span class="role">- Web Developer</span></li>
+                    <li><span class="name">Samantha Mae Ramirez</span> <span class="role">- Content Writer</span></li>
+                    <li><span class="name">Jerome Denzel Ramirez</span> <span class="role">- Researcher</span></li>
+                    <li><span class="name">Jana Lim</span> <span class="role">- Designer</span></li>
+                </ul>
+            </div>
+
+            <!-- Project Info (Center) -->
+            <div class="col-md-4 d-flex flex-column align-items-center">
+                <h5>Project Information</h5>
+                <p class="project-info text-center">
+                    This project explores Jose Rizal’s novel <i>El Filibusterismo</i> for the course 
+                    <strong>Life and Works of Rizal (RIZLIFE)</strong>.
+                </p>
+                <p class="instructor text-center"><strong>Instructor: Ms. Maria Carolina Layog</strong></p>
+            </div>
+
+            <!-- Emails (Right Side) -->
+            <div class="col-md-4 text-md-end">
+                <h5>Contact Emails</h5>
+                <ul class="list-unstyled">
+                    <li>oteyzakm@students.nu-fairview.edu.ph</li>
+                    <li>hernaezaa1@students.nu-fairview.edu.ph</li>
+                    <li>ramirezsp@students.nu-fairview.edu.ph</li>
+                    <li>ramirezjf@students.nu-fairview.edu.ph</li>
+                    <li>limjg@students.nu-fairview.edu.ph</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Background Music -->
+<audio id="background-music" loop>
+    <source src="Babaguhin Ang Buong Mundo.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Volume Control Button -->
+<button id="volume-btn" class="btn btn-dark rounded-circle position-fixed bottom-3 end-3 p-2">
+    <img src="volume-on.png" alt="Volume" id="volume-icon" class="img-fluid" width="32">
+</button>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="works.js"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

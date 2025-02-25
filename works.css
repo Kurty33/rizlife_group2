@@ -1,0 +1,561 @@
+/* General Styles */
+body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Main content wrapper */
+.main-content {
+    flex: 1; /* Pushes the footer down */
+}
+
+.hero {
+    position: relative; /* Makes sure it goes beyond navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95vh; /* Adjusted height */
+    background: url('filibusterismo.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Dark overlay to dim the image */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slight dim effect */
+    top: 0;
+    left: 0;
+}
+
+/* Ensure text is above overlay */
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Transparent text container */
+.text-box {
+    background: rgba(0, 0, 0, 0.3); /* Light transparency */
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+/* Typing effect */
+#animated-text {
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: normal;  /* ✅ Fix: Allows text to wrap */
+    overflow: hidden;
+    display: inline-block; /* ✅ Fix: Ensures cursor effect stays visible */
+    border-right: 2px solid white; /* Cursor effect */
+    max-width: 100%;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Accordion (Plot Summary) */
+.accordion {
+    margin-top: 20px;
+    max-width: 100%; /* Full width */
+}
+
+.accordion-button {
+    font-weight: bold;
+    background-color: #212121;
+    color: #ffc107;
+    border: none;
+}
+
+.accordion-body {
+    background-color: #333;
+    color: white;
+}
+
+.accordion-button:hover {
+    background-color: #e7f1ff; /* New background color on hover */
+    color: #0c63e4; /* New text color on hover */
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed; /* Fix navbar on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+    backdrop-filter: blur(10px); /* Smoothens transparency effect */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+/* Active tab */
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+ /* Fix navbar & accordion issue */
+ .navbar, .accordion-button {
+    z-index: 1050; /* Ensure they are clickable */
+}
+
+@keyframes imageExpand {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2) translate(0, -50px);
+        opacity: 0;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1051;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Layout */
+.modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When modal is active */
+.modal.show .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Image and Text Wrapper */
+.modal-body {
+    display: flex;
+
+    gap: 20px;
+}
+
+/* Modal Image */
+.modal-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Modal Text Container */
+.modal-text {
+    text-align: left;
+    color: white;
+}
+
+/* Modal Title */
+#modalTitle {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Modal Description */
+#modalDesc {
+    font-size: 16px;
+    max-width: 300px;
+    text-align: justify;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Key Characters Gallery */
+.character-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Character Card */
+.character-card {
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background: #333;
+    border-color: #ffc107;
+    position: relative;
+    overflow: hidden;
+}
+
+.character-card:hover {
+    background-color: #e7f1ff;
+    transform: scale(1.05);
+    color: #0c63e4;
+}
+
+/* Character Image */
+.character-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+/* Animate character image on click */
+.character-card.clicked .character-img {
+    animation: imageExpand 0.5s forwards;
+}
+
+/* Footer Section */
+.footer-section {
+    width: 100%;
+    background-color: #222;
+    padding: 50px 0;
+    border-top: 3px solid #ffc107;
+
+    text-align: center;
+}
+
+.content {
+    flex: 1; /* Pushes footer down */
+}
+
+.footer-section h5 {
+    color: #ffc107;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Properly Center Contributors */
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Align names and roles properly on larger screens */
+.team-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+}
+
+.name {
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.role {
+    flex: 1;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Center alignment for project info */
+.project-info {
+    font-size: 16px;
+    color: #ccc;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Instructor styling */
+.instructor {
+    font-size: 16px;
+    color: #ffc107;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style for Volume Button */
+#volume-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 9999; /* Ensures it stays on top */
+}
+
+#volume-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hover Effect */
+#volume-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        height: 75vh;
+        padding: 10px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Adjust Accordion */
+    .accordion-button {
+        font-size: 14px;
+    }
+
+    /* Character Gallery */
+    .character-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    }
+
+    .character-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 80%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .modal-img {
+        width: 150px;
+        height: auto;
+    }
+
+    .modal-text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-section h5 {
+        font-size: 18px;
+    }
+
+    .team-list li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px; /* Adds spacing between contributors */
+    }
+
+    .name {
+        font-weight: bold;
+        display: block;
+        text-align: center;
+    }
+
+    .role {
+        display: block;
+        text-align: center;
+        font-style: italic;
+    }
+
+    #volume-btn {
+        bottom: 15px; /* Adjust position */
+        right: 15px;
+        padding: 8px;
+        z-index: 9999; /* Keep above accordion */
+    }
+
+    #volume-btn img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero {
+        height: 60vh;
+        padding: 5px;
+    }
+
+    .hero .container {
+        font-size: 14px;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .text-box {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    /* Character Gallery */
+    .character-gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 Column */
+    }
+
+    .character-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .modal-img {
+        width: 100px;
+        height: auto;
+    }
+
+    .modal-text {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-section h5 {
+        font-size: 16px;
+    }
+
+    .team-list li {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .name, .role {
+        text-align: center;
+        display: block;
+        font-weight: bold;
+    }
+    #volume-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px;
+        z-index: 9999; /* Ensures visibility */
+    }
+
+    #volume-btn img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .accordion-body {
+        text-align: justify;
+    }
+}
