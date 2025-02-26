@@ -1,0 +1,429 @@
+body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+/* Highlight the active tab */
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+/* Footer Fix */
+.footer-section {
+    background-color: #222;
+    padding: 30px 0;
+    border-top: 3px solid #ffc107;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-section h5 {
+    color: #ffc107;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Properly Center Contributors */
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Align names and roles properly on larger screens */
+.team-list li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+}
+
+.name {
+    flex: 1;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.role {
+    flex: 1;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Center alignment for project info */
+.project-info {
+    font-size: 16px;
+    color: #ccc;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Instructor styling */
+.instructor {
+    font-size: 16px;
+    color: #ffc107;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style for Volume Button */
+#volume-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#volume-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hover Effect */
+#volume-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Card Slider Background */
+.card-slider-container {
+    width: 100%;
+    height: 95vh;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+/* Background Image for Slider */
+.card-slider-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95vh;
+    background: url('analysis.webp') no-repeat center center/cover;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+/* Title Styling */
+.section-title {
+    color: #ffc107;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+/* Wrapper to keep cards within bounds */
+.card-slider-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Scrollable Card Slider */
+.card-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.card-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Card Styling */
+.card {
+    flex: 0 0 350px; /* Keeps increased width */
+    height: 350px; /* Keeps increased height */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensures title stays at the top */
+    align-items: center;
+}
+
+/* Ensures h3 title is at the top */
+.card h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0; /* Ensures no extra space above */
+}
+
+/* Fixes paragraph text wrapping */
+.card p {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Allows text to wrap */
+    max-width: 100%; /* Prevents overflow */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons - Positioned Outside */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.slider-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Position buttons outside */
+.prev-btn {
+    left: -70px; /* Keeps it outside */
+}
+
+.next-btn {
+    right: -70px; /* Keeps it outside */
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Push footer to bottom */
+}
+
+@media (max-width: 768px) {
+    .footer-section .row {
+        text-align: center;
+    }
+
+    .footer-section .col-md-4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Ensure contributors list is fully centered */
+    .team-list {
+        align-items: center; 
+        text-align: center;
+        justify-content: center;
+    }
+
+    .team-list li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .name, .role {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .project-info {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .text-md-end {
+        text-align: center !important;
+    }
+
+    .text-start {
+        margin-top: 20px; /* Add space above text when it stacks */
+    }
+
+    .row.align-items-center {
+        margin-bottom: 30px; /* Add space between each section */
+    }
+
+    .card-slider-wrapper {
+        max-width: 600px;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    .prev-btn {
+        left: -50px;
+    }
+
+    .next-btn {
+        right: -50px;
+    }
+    
+    .slider-btn {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section .col-md-4 {
+        text-align: center;
+    }
+
+    /* Contributors list fully centered */
+    .team-list {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .team-list li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .name, .role {
+        text-align: center;
+        display: block;
+        font-weight: bold;
+    }
+
+    .project-info {
+        font-size: 14px;
+    }
+
+    .instructor {
+        font-size: 14px;
+    }
+
+    .text-start {
+        margin-top: 25px; /* More space above text */
+    }
+
+    .row.align-items-center {
+        margin-bottom: 35px; /* Add spacing between sections */
+    }
+
+    .card-slider-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .card-slider-wrapper {
+        max-width: 380px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .prev-btn {
+        left: -30px;
+    }
+
+    .next-btn {
+        right: -30px;
+    }
+    
+    .slider-btn {
+        padding: 6px 10px;
+    }
+}
