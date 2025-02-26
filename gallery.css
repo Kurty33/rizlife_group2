@@ -370,7 +370,7 @@ p {
     }
 
     .trailer-description {
-        font-size: 14px;
+        display: none;
     }
 
     .image-gallery a img {
