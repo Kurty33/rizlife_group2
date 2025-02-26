@@ -219,12 +219,16 @@ p {
     align-items: center;
 }
 
-/* Ensures h3 title is at the top */
+/* Ensure h3 stays inside the card on smaller screens */
 .card h3 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 0; /* Ensures no extra space above */
+    font-size: 26px; /* Reduce size slightly */
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* Allows wrapping */
+    max-width: 100%; /* Prevents overflow */
 }
 
 /* Fixes paragraph text wrapping */
@@ -412,7 +416,17 @@ main {
     }
 
     .card {
-        width: 220px;
+        width: 250px; /* Adjusts card width for smaller screens */
+        height: auto; /* Allows height to adjust */
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 18px; /* Further reduce size for better fit */
+    }
+
+    .card p {
+        font-size: 14px; /* Reduce paragraph size for readability */
     }
 
     .prev-btn {
