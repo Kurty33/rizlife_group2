@@ -115,11 +115,15 @@ body {
     text-align: center;
 }
 
-/* References Section */
+/* Full-width background */
+.references-wrapper {
+    width: 100%;
+    background-color: #222;
+}
+
+/* Content inside the container */
 .references-section {
     padding: 60px 0;
-    background-color: #222;
-    position: relative;
     color: white;
 }
 
@@ -160,6 +164,11 @@ body {
     position: relative;
     z-index: 1;
 }
+
+.references-section .row {
+    margin-bottom: 30px;
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
